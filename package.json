@@ -1,11 +1,12 @@
 {
   "name": "redux-maroon",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Redux maroon is a utility to create async middleware for redux that trys to decouple sideeffects from your application.",
   "main": "dist/index.js",
   "scripts": {
     "test": "tslint src/**/*.ts && npm run build && nyc ava tests/*.js",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
