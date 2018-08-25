@@ -1,0 +1,35 @@
+{
+  "name": "redux-maroon",
+  "version": "0.1.0",
+  "description": "Redux maroon is a utility to create async middleware for redux that trys to decouple sideeffects from your application.",
+  "main": "dist/index.ts",
+  "scripts": {
+    "test": "tslint src/**/*.ts && npm run build && nyc ava tests/*.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcblw/redux-maroon.git"
+  },
+  "keywords": [
+    "redux",
+    "saga",
+    "middlware",
+    "promise",
+    "maroon"
+  ],
+  "author": "Jacob Lowe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcblw/redux-maroon/issues"
+  },
+  "homepage": "https://github.com/jcblw/redux-maroon#readme",
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "nyc": "^12.0.2",
+    "ts-node": "^7.0.1",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.15.0",
+    "typescript": "^3.0.1"
+  }
+}

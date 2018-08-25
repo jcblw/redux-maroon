@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "isolatedModules": false,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "inlineSourceMap": false,
+    "inlineSources": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "skipLibCheck": true,
+    "preserveWatchOutput": true
+  },
+  "exclude": ["node_modules", "dist"],
+  "typeRoots": ["./node_modules/@types"],
+  "lib": ["DOM", "ES2015", "ES2016"],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}
