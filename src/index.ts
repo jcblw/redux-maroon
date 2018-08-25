@@ -85,6 +85,7 @@ export const createMaroon: CreateMaroon = (...cases) => {
       return new Promise(async (resolve, reject) => {
         let response = null;
         let error = null;
+        let resolution = resolve;
         try {
           response = await middlewareCase.handler(action);
         } catch (e) {
@@ -93,21 +94,19 @@ export const createMaroon: CreateMaroon = (...cases) => {
         if (error) {
           store.dispatch({ type: middlewareCase.actions.reject, error });
           if (middlewareCase.shouldThrow) {
-            reject(createMaroonError(action, error));
-          } else {
-            resolve();
+            resolution = reject;
+            error = createMaroonError(action, error);
           }
         }
         if (response) {
           store.dispatch({ type: middlewareCase.actions.resolve, response });
-          // avoid passing data to avoid resolution logic where action was fired
-          resolve();
         }
         store.dispatch({
           type: middlewareCase.actions.finally,
           error,
           response,
         });
+        resolution(error);
       });
     }
   };
