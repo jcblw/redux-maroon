@@ -1,5 +1,7 @@
 # Redux Maroon
 
+[![Build Status](https://travis-ci.org/jcblw/redux-maroon.svg?branch=master)](https://travis-ci.org/jcblw/redux-maroon)
+
 Middleware creator that allows you to generate async code and maroon it into middleware so it does not effect your application code.
 
 ## Why
