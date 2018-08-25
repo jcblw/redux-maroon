@@ -1,6 +1,6 @@
 {
   "name": "redux-maroon",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Redux maroon is a utility to create async middleware for redux that trys to decouple sideeffects from your application.",
   "main": "dist/index.js",
   "scripts": {
